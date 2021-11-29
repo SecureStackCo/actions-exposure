@@ -24,7 +24,7 @@ runs:
     BH_API_KEY: ${{ inputs.securestack_api_key }}
     BH_APP_ID: ${{ inputs.securestack_app_id }}
     BH_SEVERITY: ${{ inputs.severity }}
-  entrypoint: '../../entrypoint.sh'
+  entrypoint: 'entrypoint.sh'
   args:
     - recon
     - ${{ inputs.flags }}
