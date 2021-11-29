@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Exposure Analysis Step
         id: exposure
-        uses: NiftyBank/niftybank-app/actions/exposure@master
+        uses: SecureStackCo/actions-exposure@main
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: ${{ secrets.SECURESTACK_APPI_ID }}
