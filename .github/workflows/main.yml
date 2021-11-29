@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions-exposure@master
+        uses: SecureStackCo/actions-exposure@main
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
