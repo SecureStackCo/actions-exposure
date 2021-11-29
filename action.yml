@@ -1,0 +1,30 @@
+name: 'SecureStack Exposure Analysis'
+description: 'Execute SecureStack Exposure Analysis'
+inputs:
+  securestack_api_key:
+    description: 'SecureStack API key - generate an API key at https://app.securestack.com'
+    required: true
+  securestack_app_id:
+    description: 'SecureStack Application ID - can be retrieved by accessing required application at https://app.securestack.com'
+    required: true
+  severity:
+    description: 'Severities lower than this value will not be reported; value should be one of: critical | high | medium | low'
+    required: true
+  flags:
+    description: 'Optional flags for the bloodhound-cli recon command'
+    required: false
+    default: ''
+outputs:
+  result:
+    description: 'Exposure Analysis Result'
+runs:
+  using: 'docker'
+  image: 'docker://securestackau/bloodhound-cli'
+  env:
+    BH_API_KEY: ${{ inputs.securestack_api_key }}
+    BH_APP_ID: ${{ inputs.securestack_app_id }}
+    BH_SEVERITY: ${{ inputs.severity }}
+  entrypoint: './entrypoint.sh'
+  args:
+    - recon
+    - ${{ inputs.flags }}
