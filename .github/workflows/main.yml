@@ -4,32 +4,11 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo for running secrets analysis within workflow
-        id: checkout
-        uses: actions/checkout@v2.4.0
-        with:
-          fetch-depth: 0
       - name: Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions/exposure@master
+        uses: SecureStackCo/actions-exposure@master
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
           severity: critical
           flags: '--dom'
-      - name: SCA Analysis Stepp
-        id: code
-        uses: SecureStackCo/actions/code@master
-        with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
-          severity: critical
-          language: node
-      - name: Secrets Analysis Step
-        id: secrets
-        uses: SecureStackCo/actions/secrets@master
-        with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
-          severity: critical
-          flags: '-d 50'
