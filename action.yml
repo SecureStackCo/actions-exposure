@@ -24,6 +24,6 @@ runs:
       shell: bash
       run: docker run securestackau/bloodhound-cli recon ${{ inputs.flags }}
       env:
-        BH_API_KEY: ${{ inputs.securest ack_api_key }}
+        BH_API_KEY: ${{ inputs.securestack_api_key }}
         BH_APP_ID: ${{ inputs.securestack_app_id }}
         BH_SEVERITY: ${{ inputs.severity }}
