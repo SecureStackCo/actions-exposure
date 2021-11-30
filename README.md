@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions-exposure@main
+        uses: SecureStackCo/actions-exposure@v0.1.0
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: ${{ secrets.SECURESTACK_APPI_ID }}
           severity: critical
-          flags: '--dom'
+          flags: '--dom -r'
 ```
 
 ## Getting your SecureStack API Key and Application ID
