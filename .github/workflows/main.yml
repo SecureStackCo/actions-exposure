@@ -4,11 +4,6 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo for running secrets analysis within workflow
-        id: checkout
-        uses: actions/checkout@v2.4.0
-        with:
-          fetch-depth: 0
       - name: Exposure Analysis Step
         id: exposure
         uses: SecureStackCo/actions-exposure@v0.1.0
