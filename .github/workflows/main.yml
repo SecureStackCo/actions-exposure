@@ -9,6 +9,6 @@ jobs:
         uses: SecureStackCo/actions-exposure@v0.1.0
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '--dom -r'
