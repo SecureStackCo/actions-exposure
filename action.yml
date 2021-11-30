@@ -14,16 +14,16 @@ inputs:
     description: 'Optional flags for the bloodhound-cli recon command'
     required: false
     default: ''
-outputs:
-  result:
-    description: 'Exposure Analysis Result'
 runs:
-  using: 'docker'
-  image: 'docker://securestackau/bloodhound-cli'
-  env:
-    BH_API_KEY: ${{ inputs.securestack_api_key }}
-    BH_APP_ID: ${{ inputs.securestack_app_id }}
-    BH_SEVERITY: ${{ inputs.severity }}
-  args:
-    - recon
-    - ${{ inputs.flags }}
+  using: 'composite'
+  steps:
+    - name: Pull bloodhound-cli image
+      shell: bash
+      run: docker pull securestackau/bloodhound-cli
+    - name: Run bloodhound-cli
+      shell: bash
+      run: docker run securestackau/bloodhound-cli recon ${{ inputs.flags }}
+      env:
+        BH_API_KEY: ${{ inputs.securest ack_api_key }}
+        BH_APP_ID: ${{ inputs.securestack_app_id }}
+        BH_SEVERITY: ${{ inputs.severity }}
