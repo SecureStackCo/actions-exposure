@@ -4,7 +4,7 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repoo for running secrets analysis within workflow
+      - name: Checkout repo for running secrets analysis within workflow
         id: checkout
         uses: actions/checkout@v2.4.0
         with:
@@ -14,6 +14,6 @@ jobs:
         uses: SecureStackCo/actions-exposure@main
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: '3164cc31-80ad-40a8-924d-9667058ad250'
+          securestack_app_id: 'abb7fb5c-fa15-4baa-9dfd-3e77316f80a2'
           severity: critical
           flags: '--dom -r'
