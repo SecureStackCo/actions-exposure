@@ -1,4 +1,4 @@
-name: Example Workflow Using SecureStack Actionz
+name: Example Workflow Using SecureStack Action
 on: push
 jobs:
   security:
