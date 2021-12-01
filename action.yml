@@ -15,15 +15,11 @@ inputs:
     required: false
     default: ''
 runs:
-  using: 'composite'
-  steps:
-    - name: Pull bloodhound-cli image
-      shell: bash
-      run: docker pull securestackau/bloodhound-cli
-    - name: Run bloodhound-cli
-      shell: bash
-      env:
+  using: 'docker'
+  image: 'securestackau/bloodhound-cli:latest'
+  env:
         BH_API_KEY: ${{ inputs.securestack_api_key }}
         BH_APP_ID: ${{ inputs.securestack_app_id }}
         BH_SEVERITY: ${{ inputs.severity }}
-      run: echo $BH_API_KEY; docker run -e BH_API_KEY -e BH_APP_ID -e BH_SEVERITY securestackau/bloodhound-cli recon ${{ inputs.flags }}
+  args:
+    - recon ${{ inputs.flags }}
