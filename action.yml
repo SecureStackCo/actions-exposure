@@ -8,7 +8,7 @@ inputs:
     description: 'SecureStack Application ID - can be retrieved by accessing required application at https://app.securestack.com'
     required: true
   severity:
-    description: 'Severities lower than this value will not be reported; value should be one of: critical | high | medium | low'
+    description: 'Severities lower than this value will be reported in the workflow console but will not cause an error for the action; value should be one of: critical | high | medium | low'
     required: true
   flags:
     description: 'Optional flags for the bloodhound-cli recon command'
