@@ -19,6 +19,10 @@ jobs:
           flags: '--dom -r'
 ```
 
+NOTE - to understand possible values for the action input `flags`, run the SecureStack cli locally:
+
+`$ bloodhound-cli recon --help`
+
 ## Getting your SecureStack API Key
 
 1. Log in to [SecureStack](https://app.securestack.com) and go to the Profile -> GENERATE KEY screen.
