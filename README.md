@@ -1,6 +1,9 @@
 # SecureStack GitHub Actions
 
-A GitHub Action to execute SecureStack application attack surface analysis an application.
+A GitHub Action that analyses your web application for security and availability issues.
+When you add this to GitHub Actions we will analyze your web app everytime you deploy to a 
+public endpoint and let you know if what you've just deployed is secure and meets your 
+requirements.
 
 ```
 name: Example Workflow Using SecureStack Web Vulnerability Exposure Action
@@ -11,7 +14,7 @@ jobs:
     steps:
       - name: Web Vulnerability Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions-exposure@v0.1.0
+        uses: SecureStackCo/actions-exposure@v0.1.2
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: <Application Id>
