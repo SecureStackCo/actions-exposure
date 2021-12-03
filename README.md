@@ -37,4 +37,4 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 4. Paste into the value of the `securestack_app_id` action input for the step using the SecureStack action in your workflow.
 
 
-Made with 💜 by SecureStack
+Made with 💜 by [SecureStack](https://securestack.com)
