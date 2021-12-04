@@ -5,6 +5,8 @@ When you add this to GitHub Actions we will analyze your web app everytime you d
 public endpoint and let you know if what you've just deployed is secure and meets your 
 requirements.
 
+See the section below 
+
 ```
 name: Example Workflow Using SecureStack Web Vulnerability Exposure Action
 on: push
@@ -17,7 +19,7 @@ jobs:
         uses: SecureStackCo/actions-exposure@v0.1.2
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: <Application Id>
+          securestack_app_id: <put your application id here>
           severity: critical
           flags: '--dom -r'
 ```
@@ -26,13 +28,14 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 `$ bloodhound-cli recon --help`
 
-## Getting your SecureStack API Key
+## Create your SecureStack API Key and save as GitHub Secret
 
 1. Log in to [SecureStack](https://app.securestack.com) and go to the Profile -> GENERATE KEY screen.
 2. Generate an API key and copy the value.
-3. Paste into the value of a secret called SECURESTACK_API_KEY_SECRET in the GitHub repo settings.
+3. Go to Settings for your GitHub repository and click on Secrets at the bottom left.
+4. Create a new secret named SECURESTACK_API_KEY_SECRET and paste the value from step 2 into the field.
 
-## Getting your SecureStack Application ID
+## Retreiving your SecureStack Application ID
 
 1. Log in to [SecureStack](https://app.securestack.com).
 2. Open the application you wish to analyse.
