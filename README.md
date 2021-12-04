@@ -1,4 +1,4 @@
-# SecureStack GitHub Actions
+# SecureStack Web Vulnerability Analysis GitHub Action
 
 A GitHub Action that analyses your web application for security and availability issues.
 When you add this to GitHub Actions we will analyze your web app everytime you deploy to a 
