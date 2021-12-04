@@ -1,5 +1,5 @@
 name: 'SecureStack Web Vulnerability Analysis'
-description: 'Scan your public deployment URL for security issues like vulnerable or out of date web components, cloud misconfigurations, missing security controls, and more '
+description: 'Scans public URL for issues like vulnerable & old web components, cloud misconfigurations, missing security controls, & more'
 branding:
   icon: 'shield'  
   color: 'green'
