@@ -1,8 +1,8 @@
 name: 'SecureStack Web Vulnerability Analysis'
 description: 'Scan your public deployment URL for security issues.  Works for dev, staging or prod.'
 branding:
-  icon: 'check'  
-  color: 'red'
+  icon: 'shield'  
+  color: 'green'
 inputs:
   securestack_api_key:
     description: 'SecureStack API key - generate an API key at https://app.securestack.com'
