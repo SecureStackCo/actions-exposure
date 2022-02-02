@@ -16,8 +16,8 @@ jobs:
         id: exposure
         uses: SecureStackCo/actions-exposure@v0.1.2
         with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: <put your application id here>
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '--dom -r'
 ```
