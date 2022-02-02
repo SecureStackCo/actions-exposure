@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions-exposure@v0.1.0
+        uses: SecureStackCo/actions-exposure@v0.1.2
         with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: 'a9ad205b-d519-4a95-833d-304b6e82be21'
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '--dom -r'
