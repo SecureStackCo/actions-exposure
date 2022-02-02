@@ -1,0 +1,20 @@
+name: Example Workflow Using SecureStack Application Composition Analysis Action
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo for running code analysis within workflow
+        id: checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: 0
+      - name: Code Analysis Step
+        id: code
+        uses: SecureStackCo/actions-code@main
+        with:
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_API_KEY }}
+          severity: critical
+          language: node
+          flags: '--path . --debug'
