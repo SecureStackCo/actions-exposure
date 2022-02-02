@@ -46,7 +46,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/0sYXsCmY2es/0.jpg)](http://www.youtube.com/watch?v=0sYXsCmY2es "Video Title")
 
 ## What vulnerabilities do we find?
-1. Scans web application for out of date and vulnerable applicaiton components
+1. Scans web application for out of date and vulnerable application components
 2. Identifies whether basic security controls like WAF, firewalls, and security headers are being used
 3. Finds all public facing assets & helps you understand your application attack surface
 4. Identifies misconfigurations in existing WAF or CDN
@@ -55,7 +55,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 ## Check out our other GitHub Actions:
 1. [SecureStack Secrets Analysis](https://github.com/marketplace/actions/securestack-secrets-analysis) - Scan your application for embedded api keys, credentials and senstive data.
-2. [SecureStack Software Composition Analysis (SCA)](https://github.com/marketplace/actions/securestack-application-composition-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
+2. [SecureStack Software Composition Analysis (SCA)](https://github.com/marketplace/actions/securestack-application-composition-analysis) - Scan your application for vulnerable third-party and open source libraries.
 3. [SecureStack Log4j Analysis](https://github.com/marketplace/actions/securestack-log4j-vulnerability-analysis) - Scan your application for Log4j/Log4Shell vulnerabilities.
 
 ## Learn more about SecureStack with our YouTube Channel:
