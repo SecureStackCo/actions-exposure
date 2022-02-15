@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Web Vulnerability Exposure Analysis Step
         id: exposure
-        uses: SecureStackCo/actions-exposure@v0.1.2
+        uses: SecureStackCo/actions-exposure@v0.1.3
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
